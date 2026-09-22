@@ -1,10 +1,27 @@
-minimum_characters = 8
-password = input(f"Enter Password (minimum {minimum_characters} characters): ")
-number_of_characters = len(password)
+"""Module docstring"""
 
-while number_of_characters < minimum_characters:
-    print(f"password must be a mimimum of {minimum_characters} characters")
+
+# imports
+# CONSTANTS
+
+def main():
+    """Function docstring"""
+    minimum_characters = 8
+    password = get_password(minimum_characters)
+
+    print_stars(password)
+
+
+def print_stars(password: str):
+    print("*" * len(password))
+
+
+def get_password(minimum_characters: int) -> str:
     password = input(f"Enter Password (minimum {minimum_characters} characters): ")
-    number_of_characters = len(password)
+    while len(password) < minimum_characters:
+        print(f"password must be a mimimum of {minimum_characters} characters")
+        password = input(f"Enter Password (minimum {minimum_characters} characters): ")
+    return password
 
-print("*" * number_of_characters)
+
+main()
