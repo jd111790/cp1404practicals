@@ -2,12 +2,29 @@
 CP1404/CP5632 - Practical
 Program to determine score status
 """
-
+import random
 
 def main():
     score = float(input("Enter score: "))
     result = determine_result(score)
     print(result)
+
+    score = random.randint(0, 100)
+    result = determine_result(score)
+
+    print(f"Random: {score} = {result}")
+
+
+    """end_program = input("end: ").upper()
+
+    while end_program != "Y":
+        score = random.randint(0, 100)
+        result = determine_result(score)
+
+        print(f"Random: {score} = {result}")
+        end_program = input("end: ").upper()"""
+
+
 
 
 def determine_result(score: float) -> str:
