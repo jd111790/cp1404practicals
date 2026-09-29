@@ -11,3 +11,10 @@ name = in_name_file.readline()
 print(f"Hi {name.strip()}!")
 in_name_file.close()
 
+# 3.
+with open("numbers.txt", "r") as in_file:
+    number = int(in_file.readline()) + int(in_file.readline())
+    print(number)
+
+
+
