@@ -3,11 +3,10 @@
 
 # imports
 # CONSTANTS
-
+MINIMUM_CHARACTERS = 8
 def main():
     """Function docstring"""
-    minimum_characters = 8
-    password = get_password(minimum_characters)
+    password = get_password(MINIMUM_CHARACTERS)
 
     print_stars(password)
 
