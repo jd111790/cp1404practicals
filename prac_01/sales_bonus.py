@@ -5,11 +5,20 @@ If sales are $1,000 or over, the bonus is 15%.
 """
 
 sales = float(input("Enter sales: $"))
-if sales < 1000.0:
-    bonus = 0.1 * sales
-elif sales >= 1000.0:
-    bonus = 0.15 * sales
-sales += bonus
-print(f"Bonus = {bonus}")
-print(f"Sales bonus = ${sales}")
+# if sales < 1000.0:
+#     bonus = 0.1 * sales
+# elif sales >= 1000.0:
+#     bonus = 0.15 * sales
+# sales += bonus
+# print(f"Bonus = {bonus}")
+# print(f"Sales bonus = ${sales}")
 
+while sales >= 0:
+    if sales < 1000.0:
+        bonus = 0.1 * sales
+    elif sales >= 1000.0:
+        bonus = 0.15 * sales
+    sales += bonus
+    print(f"Bonus = {bonus}")
+    print(f"Sales bonus = ${sales}")
+    sales = float(input("Enter sales: $"))
