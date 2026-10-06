@@ -15,7 +15,7 @@ def main():
     print_income_report(incomes)
 
 
-def print_income_report(incomes: list[float]):
+def print_income_report(incomes):
     print("\nIncome Report\n-------------")
     total = 0
     for month in range(1, len(incomes) + 1):
