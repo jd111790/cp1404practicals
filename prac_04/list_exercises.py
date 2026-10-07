@@ -1,4 +1,13 @@
+from os import access
+
+usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn',
+             'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
 numbers = []
+users_name = input("Username: ")
+while users_name not in usernames:
+    print("Access denied")
+    users_name = input("Username: ")
+print("Access granted")
 for i in range(5):
     numbers.append(int(input("Number: ")))
     print(numbers)
