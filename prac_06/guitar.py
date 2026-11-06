@@ -7,7 +7,7 @@ class Guitar:
         self.year = year
         self.cost = cost
 
-    def __str__(self) -> str:
+    def __str__(self):
         guitar_string = f"{self.name} ({self.year}) : ${self.cost}"
         return guitar_string
 
