@@ -7,9 +7,11 @@ class Guitar:
         self.year = year
         self.cost = cost
 
-    def __str__(self):
-        guitar_string = f"{self.name} ({self.year}) : ${self.cost}"
-        return guitar_string
+    # def __str__(self):
+    #     return f"{self.name} ({self.year}) : ${self.cost}"
+
+    def __repr__(self):
+        return f"{self.name} ({self.year}) : ${self.cost}"
 
     def get_age(self) -> int:
         current_year = datetime.datetime.now().year
