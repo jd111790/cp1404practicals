@@ -11,11 +11,8 @@ FILE_NAME = "guitars.csv"
 
 def main():
     guitars = read_file()
-    for guitar in guitars:  # debugging
-        print(guitar)
-    guitars.sort()
-    for guitar in guitars:  # debugging
-        print(guitar)
+    sort_guitars_by_year(guitars)
+    add_guitar(guitars)
 
 
 def read_file():
@@ -30,6 +27,23 @@ def store_data_in_list(in_file):
         parts = line.strip().split(',')
         guitars.append(Guitar(parts[0], int(parts[1]), float(parts[2])))
     return guitars
+
+def sort_guitars_by_year(guitars):
+    guitars.sort()
+
+def add_guitar(guitars):
+    guitar_name = input("Name: ")
+    guitar_year = int(input("Year: "))
+    guitar_cost = float(input("Cost: "))
+
+    guitars.append(Guitar(guitar_name, guitar_year, guitar_cost))
+    # print(guitars) # debugging
+    # for guitar in guitars: # debugging
+    #     print(guitar)
+    sort_guitars_by_year(guitars)
+    # for guitar in guitars: # debugging
+    #     print(guitar)
+
 
 
 main()
